@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+<title>Forensic Investigation — 120 Question Exam</title>
+<style>
+  :root{
+    --bg:#001f3f; --card:#002b5c; --accent:#ffcc00; --text:#fff;
+    --correct-bg:#006400; --wrong-bg:#8b0000;
+  }
+  body{
+    margin:0; font-family:Inter,Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text);
+    padding:24px;
+  }
+  header{ text-align:center; margin-bottom:18px;}
+  h1{ color:var(--accent); margin:6px 0; font-size:28px;}
+  p.lead{ color:#cfe8ff; margin-top:0; }
+  .section{
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    border:1px solid rgba(255,204,0,0.08);
+    border-left:6px solid var(--accent);
+    padding:16px; margin:18px 0; border-radius:10px;
+  }
+  h2{ color:var(--accent); margin:0 0 10px 0; font-size:20px; }
+  .question{ margin-bottom:12px; padding:8px; border-radius:6px;}
+  .question p{ margin:0 0 6px 0; }
+  .options label{
+    display:block; margin:6px 0; padding:6px 8px; border-radius:6px; cursor:pointer;
+    background:transparent;
+  }
+  input[type="radio"]{ margin-right:10px; transform:scale(1.05); }
+  button{
+    display:inline-block; margin:18px 6px 6px 0; padding:10px 16px; border-radius:8px; border:none;
+    background:var(--accent); color:#001f3f; font-weight:700; cursor:pointer;
+  }
+  #resultTop, #result{ text-align:center; margin:14px 0; font-size:18px; color:var(--accent); }
+  .correct{ background:var(--correct-bg) !important; color:#fff !important; }
+  .wrong{ background:var(--wrong-bg) !important; color:#fff !important; }
+  footer{ text-align:center; margin-top:28px; color:#cfe8ff; font-size:13px; }
+  @media (min-width:900px){
+    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Forensic Investigation — Full Exam (120 Questions)</h1>
+  <p class="lead">Answer all questions below. When finished, click <strong>Submit All</strong> to see your score and highlighted answers.</p>
+  <div id="resultTop"></div>
+</header>
+
+<form id="quizForm">
+
+  <!-- 1: Investigative Team (15) -->
+  <section class="section" id="section-1">
+    <h2>Quiz 1 — Investigative Team (15 questions)</h2>
+
+    <!-- q1 -->
+    <div class="question">
+      <p>1. Who is usually the first person to arrive at a crime scene?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Detective</label>
+        <label><input type="radio" name="q1" value="b" data-correct="true"> Initial responding officer</label>
+        <label><input type="radio" name="q1" value="c"> Forensic scientist</label>
+        <label><input type="radio" name="q1" value="d"> Prosecutor</label>
+      </div>
+    </div>
+
+    <!-- q2 -->
+    <div class="question">
+      <p>2. The crime scene investigator’s primary goal is to:</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> Arrest the suspect immediately</label>
+        <label><input type="radio" name="q2" value="b"> Question witnesses</label>
+        <label><input type="radio" name="q2" value="c" data-correct="true"> Collect and preserve evidence properly</label>
+        <label><input type="radio" name="q2" value="d"> Guard the scene perimeter only</label>
+      </div>
+    </div>
+
+    <!-- q3 -->
+    <div class="question">
+      <p>3. Who is typically responsible for maintaining the chain of custody?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> Photographer</label>
+        <label><input type="radio" name="q3" value="b" data-correct="true"> Evidence custodian</label>
+        <label><input type="radio" name="q3" value="c"> Sketch artist</label>
+        <label><input type="radio" name="q3" value="d"> Witness interviewer</label>
+      </div>
+    </div>
+
+    <!-- q4 -->
+    <div class="question">
+      <p>4. The lead investigator’s primary responsibility is to:</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> Take photos</label>
+        <label><input type="radio" name="q4" value="b" data-correct="true"> Coordinate and direct the investigation</label>
+        <label><input type="radio" name="q4" value="c"> Only write lab reports</label>
+        <label><input type="radio" name="q4" value="d"> Provide legal counsel</label>
+      </div>
+    </div>
+
+    <!-- q5 -->
+    <div class="question">
+      <p>5. Who ensures unauthorized persons do not enter the scene?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> Forensic analyst</label>
+        <label><input type="radio" name="q5" value="b" data-correct="true"> Scene security officer / guard</label>
+        <label><input type="radio" name="q5" value="c"> Photographer</label>
+        <label><input type="radio" name="q5" value="d"> Prosecution witness</label>
+      </div>
+    </div>
+
+    <!-- q6 -->
+    <div class="question">
+      <p>6. The exchange principle (Locard) states that:</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a"> Evidence always proves guilt</label>
+        <label><input type="radio" name="q6" value="b" data-correct="true"> Every contact leaves a trace</label>
+        <label><input type="radio" name="q6" value="c"> Evidence cannot be transferred</label>
+        <label><input type="radio" name="q6" value="d"> Only DNA transfers matter</label>
+      </div>
+    </div>
+
+    <!-- q7 -->
+    <div class="question">
+      <p>7. Which team member documents the scene with sketches?</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a" data-correct="true"> Sketch artist</label>
+        <label><input type="radio" name="q7" value="b"> Prosecutor</label>
+        <label><input type="radio" name="q7" value="c"> Evidence custodian</label>
+        <label><input type="radio" name="q7" value="d"> Scene guard</label>
+      </div>
+    </div>
+
+    <!-- q8 -->
+    <div class="question">
+      <p>8. Who collects digital evidence at the scene?</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a"> Fingerprint technician</label>
+        <label><input type="radio" name="q8" value="b" data-correct="true"> Digital/forensic IT specialist</label>
+        <label><input type="radio" name="q8" value="c"> Sketch artist</label>
+        <label><input type="radio" name="q8" value="d"> Pathologist</label>
+      </div>
+    </div>
+
+    <!-- q9 -->
+    <div class="question">
+      <p>9. The supervisor ensures what at a scene?</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a"> Scene safety and operational planning</label>
+        <label><input type="radio" name="q9" value="b" data-correct="true"> All of the above</label>
+        <label><input type="radio" name="q9" value="c"> Only arrests</label>
+        <label><input type="radio" name="q9" value="d"> Only evidence collection</label>
+      </div>
+    </div>
+
+    <!-- q10 -->
+    <div class="question">
+      <p>10. Evidence custodians should log what?</p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="a" data-correct="true"> Who handled evidence and when (chain of custody)</label>
+        <label><input type="radio" name="q10" value="b"> Only where evidence was found</label>
+        <label><input type="radio" name="q10" value="c"> Only the case number</label>
+        <label><input type="radio" name="q10" value="d"> Witness names only</label>
+      </div>
+    </div>
+
+    <!-- q11 -->
+    <div class="question">
+      <p>11. A brief initial scene walk-through is used to:</p>
+      <div class="options">
+        <label><input type="radio" name="q11" value="a" data-correct="true"> Form a processing plan</label>
+        <label><input type="radio" name="q11" value="b"> Collect evidence immediately</label>
+        <label><input type="radio" name="q11" value="c"> Interview suspects</label>
+        <label><input type="radio" name="q11" value="d"> Arrest witnesses</label>
+      </div>
+    </div>
+
+    <!-- q12 -->
+    <div class="question">
+      <p>12. Who is responsible for coordinating external agencies?</p>
+      <div class="options">
+        <label><input type="radio" name="q12" value="a" data-correct="true"> Incident commander / lead investigator</label>
+        <label><input type="radio" name="q12" value="b"> Evidence technician</label>
+        <label><input type="radio" name="q12" value="c"> Crime scene photographer</label>
+        <label><input type="radio" name="q12" value="d"> Forensic artist</label>
+      </div>
+    </div>
+
+    <!-- q13 -->
+    <div class="question">
+      <p>13. Effective communication on scene minimizes:</p>
+      <div class="options">
+        <label><input type="radio" name="q13" value="a" data-correct="true"> Errors and evidence loss</label>
+        <label><input type="radio" name="q13" value="b"> Note taking</label>
+        <label><input type="radio" name="q13" value="c"> Sketching</label>
+        <label><input type="radio" name="q13" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q14 -->
+    <div class="question">
+      <p>14. Team briefings are important for:</p>
+      <div class="options">
+        <label><input type="radio" name="q14" value="a" data-correct="true"> Assigning roles and clarifying strategy</label>
+        <label><input type="radio" name="q14" value="b"> Filing final reports</label>
+        <label><input type="radio" name="q14" value="c"> Photography only</label>
+        <label><input type="radio" name="q14" value="d"> Arresting suspects</label>
+      </div>
+    </div>
+
+    <!-- q15 -->
+    <div class="question">
+      <p>15. Proper PPE for the team prevents:</p>
+      <div class="options">
+        <label><input type="radio" name="q15" value="a" data-correct="true"> Contamination and health risks</label>
+        <label><input type="radio" name="q15" value="b"> Only paperwork mistakes</label>
+        <label><input type="radio" name="q15" value="c"> Faster arrests</label>
+        <label><input type="radio" name="q15" value="d"> Improved sketches only</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 2: Forensic Search and Seizure (15) -->
+  <section class="section" id="section-2">
+    <h2>Quiz 2 — Forensic Search & Seizure (15 questions)</h2>
+
+    <!-- q16 -->
+    <div class="question">
+      <p>16. Which constitutional protection guards against unreasonable searches?</p>
+      <div class="options">
+        <label><input type="radio" name="q16" value="a"> First Amendment</label>
+        <label><input type="radio" name="q16" value="b" data-correct="true"> Fourth Amendment</label>
+        <label><input type="radio" name="q16" value="c"> Sixth Amendment</label>
+        <label><input type="radio" name="q16" value="d"> Fifth Amendment</label>
+      </div>
+    </div>
+
+    <!-- q17 -->
+    <div class="question">
+      <p>17. Which allows officers to seize visible evidence during a lawful presence?</p>
+      <div class="options">
+        <label><input type="radio" name="q17" value="a"> Plain view doctrine</label>
+        <label><input type="radio" name="q17" value="b" data-correct="true"> Plain view doctrine</label>
+        <label><input type="radio" name="q17" value="c"> Miranda rule</label>
+        <label><input type="radio" name="q17" value="d"> Double jeopardy</label>
+      </div>
+    </div>
+
+    <!-- q18 -->
+    <div class="question">
+      <p>18. Exigent circumstances permitting search occur when:</p>
+      <div class="options">
+        <label><input type="radio" name="q18" value="a"> There’s an immediate danger or risk of evidence loss</label>
+        <label><input type="radio" name="q18" value="b" data-correct="true"> Immediate danger or risk of evidence loss</label>
+        <label><input type="radio" name="q18" value="c"> The officer wants to search</label>
+        <label><input type="radio" name="q18" value="d"> The suspect consents</label>
+      </div>
+    </div>
+
+    <!-- q19 -->
+    <div class="question">
+      <p>19. What is required for a valid search warrant?</p>
+      <div class="options">
+        <label><input type="radio" name="q19" value="a"> Probable cause and judicial approval</label>
+        <label><input type="radio" name="q19" value="b" data-correct="true"> Probable cause and judicial approval</label>
+        <label><input type="radio" name="q19" value="c"> Only officer request</label>
+        <label><input type="radio" name="q19" value="d"> Public notice</label>
+      </div>
+    </div>
+
+    <!-- q20 -->
+    <div class="question">
+      <p>20. Evidence found unlawfully may be excluded under:</p>
+      <div class="options">
+        <label><input type="radio" name="q20" value="a" data-correct="true"> Exclusionary rule</label>
+        <label><input type="radio" name="q20" value="b"> Hearsay rule</label>
+        <label><input type="radio" name="q20" value="c"> Chain of custody rule</label>
+        <label><input type="radio" name="q20" value="d"> Plain view rule</label>
+      </div>
+    </div>
+
+    <!-- q21 -->
+    <div class="question">
+      <p>21. The “plain touch” doctrine applies to:</p>
+      <div class="options">
+        <label><input type="radio" name="q21" value="a" data-correct="true"> Seizure by lawful touch revealing contraband</label>
+        <label><input type="radio" name="q21" value="b"> Photographing evidence</label>
+        <label><input type="radio" name="q21" value="c"> Sketching the scene</label>
+        <label><input type="radio" name="q21" value="d"> Fingerprint dusting</label>
+      </div>
+    </div>
+
+    <!-- q22 -->
+    <div class="question">
+      <p>22. Which is not a valid reason for searching without a warrant?</p>
+      <div class="options">
+        <label><input type="radio" name="q22" value="a"> Exigent circumstances</label>
+        <label><input type="radio" name="q22" value="b" data-correct="true"> Officer laziness</label>
+        <label><input type="radio" name="q22" value="c"> Consent by occupant</label>
+        <label><input type="radio" name="q22" value="d"> Search incident to arrest</label>
+      </div>
+    </div>
+
+    <!-- q23 -->
+    <div class="question">
+      <p>23. The “fruit of the poisonous tree” doctrine means:</p>
+      <div class="options">
+        <label><input type="radio" name="q23" value="a" data-correct="true"> Evidence derived from illegal search is tainted</label>
+        <label><input type="radio" name="q23" value="b"> Fruit left at scene is evidence</label>
+        <label><input type="radio" name="q23" value="c"> Evidence is always admissible</label>
+        <label><input type="radio" name="q23" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q24 -->
+    <div class="question">
+      <p>24. Chain of custody documents:</p>
+      <div class="options">
+        <label><input type="radio" name="q24" value="a" data-correct="true"> Who handled evidence and when</label>
+        <label><input type="radio" name="q24" value="b"> Only where evidence was found</label>
+        <label><input type="radio" name="q24" value="c"> Only the analyst’s name</label>
+        <label><input type="radio" name="q24" value="d"> Only the case number</label>
+      </div>
+    </div>
+
+    <!-- q25 -->
+    <div class="question">
+      <p>25. Seizing a suspect’s mobile phone generally requires:</p>
+      <div class="options">
+        <label><input type="radio" name="q25" value="a"> A warrant or consent</label>
+        <label><input type="radio" name="q25" value="b" data-correct="true"> A warrant or consent</label>
+        <label><input type="radio" name="q25" value="c"> No legal process</label>
+        <label><input type="radio" name="q25" value="d"> Only the prosecutor’s order</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 3: Documentation (20) -->
+  <section class="section" id="section-3">
+    <h2>Quiz 3 — Documentation (20 questions)</h2>
+
+    <!-- q26 -->
+    <div class="question">
+      <p>26. The main purpose of note taking at the scene is to:</p>
+      <div class="options">
+        <label><input type="radio" name="q26" value="a" data-correct="true"> Provide a permanent record of observations/actions</label>
+        <label><input type="radio" name="q26" value="b"> Replace photographs</label>
+        <label><input type="radio" name="q26" value="c"> Serve as a warrant</label>
+        <label><input type="radio" name="q26" value="d"> Record only suspect names</label>
+      </div>
+    </div>
+
+    <!-- q27 -->
+    <div class="question">
+      <p>27. Notes should be written:</p>
+      <div class="options">
+        <label><input type="radio" name="q27" value="a"> After leaving the scene</label>
+        <label><input type="radio" name="q27" value="b" data-correct="true"> Continuously during the investigation</label>
+        <label><input type="radio" name="q27" value="c"> Only during interviews</label>
+        <label><input type="radio" name="q27" value="d"> By supervisor only</label>
+      </div>
+    </div>
+
+    <!-- q28 -->
+    <div class="question">
+      <p>28. A good note should include:</p>
+      <div class="options">
+        <label><input type="radio" name="q28" value="a"> Time, date, weather, and actions taken</label>
+        <label><input type="radio" name="q28" value="b" data-correct="true"> Time, date, weather, and actions taken</label>
+        <label><input type="radio" name="q28" value="c"> Only names</label>
+        <label><input type="radio" name="q28" value="d"> Only sketches</label>
+      </div>
+    </div>
+
+    <!-- q29 -->
+    <div class="question">
+      <p>29. The photo log should include:</p>
+      <div class="options">
+        <label><input type="radio" name="q29" value="a" data-correct="true"> Date, time, description and photographer</label>
+        <label><input type="radio" name="q29" value="b"> Only number of photos</label>
+        <label><input type="radio" name="q29" value="c"> Witness statements</label>
+        <label><input type="radio" name="q29" value="d"> Camera serial number only</label>
+      </div>
+    </div>
+
+    <!-- q30 -->
+    <div class="question">
+      <p>30. Which photo shows evidence location within overall scene?</p>
+      <div class="options">
+        <label><input type="radio" name="q30" value="a" data-correct="true"> Overall (long-range)</label>
+        <label><input type="radio" name="q30" value="b"> Close-up</label>
+        <label><input type="radio" name="q30" value="c"> Macro</label>
+        <label><input type="radio" name="q30" value="d"> Forensic scale only</label>
+      </div>
+    </div>
+
+    <!-- q31 -->
+    <div class="question">
+      <p>31. When photographing evidence, include a scale to:</p>
+      <div class="options">
+        <label><input type="radio" name="q31" value="a"> Show size/proportion of evidence</label>
+        <label><input type="radio" name="q31" value="b" data-correct="true"> Show size/proportion of evidence</label>
+        <label><input type="radio" name="q31" value="c"> Improve color balance</label>
+        <label><input type="radio" name="q31" value="d"> Label the photographer</label>
+      </div>
+    </div>
+
+    <!-- q32 -->
+    <div class="question">
+      <p>32. Sketch legend explains:</p>
+      <div class="options">
+        <label><input type="radio" name="q32" value="a"> The backstory of the crime</label>
+        <label><input type="radio" name="q32" value="b" data-correct="true"> Symbols and items shown on the sketch</label>
+        <label><input type="radio" name="q32" value="c"> The suspect’s name</label>
+        <label><input type="radio" name="q32" value="d"> Weather conditions</label>
+      </div>
+    </div>
+
+    <!-- q33 -->
+    <div class="question">
+      <p>33. Rough sketches are made ______ and finished sketches are ______.</p>
+      <div class="options">
+        <label><input type="radio" name="q33" value="a" data-correct="true"> At scene; to scale for court</label>
+        <label><input type="radio" name="q33" value="b"> In lab; at scene</label>
+        <label><input type="radio" name="q33" value="c"> By photographer; by sketch artist</label>
+        <label><input type="radio" name="q33" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q34 -->
+    <div class="question">
+      <p>34. Notes may be used later to prepare:</p>
+      <div class="options">
+        <label><input type="radio" name="q34" value="a"> Final reports</label>
+        <label><input type="radio" name="q34" value="b" data-correct="true"> Final reports</label>
+        <label><input type="radio" name="q34" value="c"> Laboratory manuals only</label>
+        <label><input type="radio" name="q34" value="d"> Only search warrants</label>
+      </div>
+    </div>
+
+    <!-- q35 -->
+    <div class="question">
+      <p>35. Photo editing prior to submission to court should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q35" value="a" data-correct="true"> Avoided unless documented</label>
+        <label><input type="radio" name="q35" value="b"> Done freely</label>
+        <label><input type="radio" name="q35" value="c"> Required</label>
+        <label><input type="radio" name="q35" value="d"> Hidden</label>
+      </div>
+    </div>
+
+    <!-- q36 -->
+    <div class="question">
+      <p>36. The compass direction on sketches helps to:</p>
+      <div class="options">
+        <label><input type="radio" name="q36" value="a" data-correct="true"> Orient the layout geographically</label>
+        <label><input type="radio" name="q36" value="b"> Show case number</label>
+        <label><input type="radio" name="q36" value="c"> Indicate photographer</label>
+        <label><input type="radio" name="q36" value="d"> Indicate evidence weight</label>
+      </div>
+    </div>
+
+    <!-- q37 -->
+    <div class="question">
+      <p>37. Close-up photographs are primarily used to:</p>
+      <div class="options">
+        <label><input type="radio" name="q37" value="a" data-correct="true"> Show detail of a single item of evidence</label>
+        <label><input type="radio" name="q37" value="b"> Show the whole scene</label>
+        <label><input type="radio" name="q37" value="c"> Show witness faces</label>
+        <label><input type="radio" name="q37" value="d"> Show weather</label>
+      </div>
+    </div>
+
+    <!-- q38 -->
+    <div class="question">
+      <p>38. When taking notes, abbreviations should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q38" value="a"> Used extensively without key</label>
+        <label><input type="radio" name="q38" value="b" data-correct="true"> Used carefully and legibly (or avoided)</label>
+        <label><input type="radio" name="q38" value="c"> Omitted completely</label>
+        <label><input type="radio" name="q38" value="d"> Used only by supervisors</label>
+      </div>
+    </div>
+
+    <!-- q39 -->
+    <div class="question">
+      <p>39. Photo logs should be maintained to show:</p>
+      <div class="options">
+        <label><input type="radio" name="q39" value="a" data-correct="true"> When and what was photographed</label>
+        <label><input type="radio" name="q39" value="b"> The model of the camera only</label>
+        <label><input type="radio" name="q39" value="c"> Witness opinions</label>
+        <label><input type="radio" name="q39" value="d"> Weather forecast</label>
+      </div>
+    </div>
+
+    <!-- q40 -->
+    <div class="question">
+      <p>40. A scale placed beside evidence is called a:</p>
+      <div class="options">
+        <label><input type="radio" name="q40" value="a" data-correct="true"> Forensic scale</label>
+        <label><input type="radio" name="q40" value="b"> Ruler</label>
+        <label><input type="radio" name="q40" value="c"> Tape</label>
+        <label><input type="radio" name="q40" value="d"> Compass</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 4: Locating Evidence (20) -->
+  <section class="section" id="section-4">
+    <h2>Quiz 4 — Locating Evidence (20 questions)</h2>
+
+    <!-- q41 -->
+    <div class="question">
+      <p>41. Which search pattern is best for large outdoor scenes with many investigators?</p>
+      <div class="options">
+        <label><input type="radio" name="q41" value="a" data-correct="true"> Line / strip search</label>
+        <label><input type="radio" name="q41" value="b"> Spiral search</label>
+        <label><input type="radio" name="q41" value="c"> Grid search</label>
+        <label><input type="radio" name="q41" value="d"> Random search</label>
+      </div>
+    </div>
+
+    <!-- q42 -->
+    <div class="question">
+      <p>42. Spiral search is most useful in:</p>
+      <div class="options">
+        <label><input type="radio" name="q42" value="a"> Small, circular areas</label>
+        <label><input type="radio" name="q42" value="b" data-correct="true"> Small, circular areas</label>
+        <label><input type="radio" name="q42" value="c"> Highway scenes</label>
+        <label><input type="radio" name="q42" value="d"> Multi-story buildings</label>
+      </div>
+    </div>
+
+    <!-- q43 -->
+    <div class="question">
+      <p>43. Grid search combines which patterns?</p>
+      <div class="options">
+        <label><input type="radio" name="q43" value="a"> Strip and spiral</label>
+        <label><input type="radio" name="q43" value="b" data-correct="true"> Two perpendicular line searches</label>
+        <label><input type="radio" name="q43" value="c"> Random and zone</label>
+        <label><input type="radio" name="q43" value="d"> Spiral and zone</label>
+      </div>
+    </div>
+
+    <!-- q44 -->
+    <div class="question">
+      <p>44. Zone search is best for:</p>
+      <div class="options">
+        <label><input type="radio" name="q44" value="a"> Large open fields only</label>
+        <label><input type="radio" name="q44" value="b" data-correct="true"> Complex scenes divided into manageable areas</label>
+        <label><input type="radio" name="q44" value="c"> Underwater scenes</label>
+        <label><input type="radio" name="q44" value="d"> Single-room searches</label>
+      </div>
+    </div>
+
+    <!-- q45 -->
+    <div class="question">
+      <p>45. An ALS (alternative light source) is used to:</p>
+      <div class="options">
+        <label><input type="radio" name="q45" value="a" data-correct="true"> Visualize latent biological stains and trace evidence</label>
+        <label><input type="radio" name="q45" value="b"> Replace DNA testing</label>
+        <label><input type="radio" name="q45" value="c"> Replace fingerprint powder</label>
+        <label><input type="radio" name="q45" value="d"> Take photos at night only</label>
+      </div>
+    </div>
+
+    <!-- q46 -->
+    <div class="question">
+      <p>46. When using ALS you should also use:</p>
+      <div class="options">
+        <label><input type="radio" name="q46" value="a"> No protective eyewear</label>
+        <label><input type="radio" name="q46" value="b" data-correct="true"> Appropriate goggles/filters</label>
+        <label><input type="radio" name="q46" value="c"> Only camera flash</label>
+        <label><input type="radio" name="q46" value="d"> Infrared thermometer</label>
+      </div>
+    </div>
+
+    <!-- q47 -->
+    <div class="question">
+      <p>47. Presumptive tests are used to:</p>
+      <div class="options">
+        <label><input type="radio" name="q47" value="a"> Provide a definitive identification</label>
+        <label><input type="radio" name="q47" value="b" data-correct="true"> Indicate the possible presence of a substance</label>
+        <label><input type="radio" name="q47" value="c"> Replace lab testing</label>
+        <label><input type="radio" name="q47" value="d"> Destroy evidence</label>
+      </div>
+    </div>
+
+    <!-- q48 -->
+    <div class="question">
+      <p>48. Chemical enhancements (like Ninhydrin) are used for:</p>
+      <div class="options">
+        <label><input type="radio" name="q48" value="a" data-correct="true"> Developing latent fingerprints on porous surfaces</label>
+        <label><input type="radio" name="q48" value="b"> Neutralizing blood</label>
+        <label><input type="radio" name="q48" value="c"> Boosting DNA signal</label>
+        <label><input type="radio" name="q48" value="d"> Cleaning evidence</label>
+      </div>
+    </div>
+
+    <!-- q49 -->
+    <div class="question">
+      <p>49. Latent fingerprint development on non-porous surfaces commonly uses:</p>
+      <div class="options">
+        <label><input type="radio" name="q49" value="a"> Ninhydrin</label>
+        <label><input type="radio" name="q49" value="b" data-correct="true"> Powder or cyanoacrylate (superglue) fuming</label>
+        <label><input type="radio" name="q49" value="c"> Luminol</label>
+        <label><input type="radio" name="q49" value="d"> ALS only</label>
+      </div>
+    </div>
+
+    <!-- q50 -->
+    <div class="question">
+      <p>50. Luminol is used to:</p>
+      <div class="options">
+        <label><input type="radio" name="q50" value="a" data-correct="true"> Detect trace amounts of blood at scenes</label>
+        <label><input type="radio" name="q50" value="b"> Develop fingerprints</label>
+        <label><input type="radio" name="q50" value="c"> Package evidence</label>
+        <label><input type="radio" name="q50" value="d"> Clean floors</label>
+      </div>
+    </div>
+
+    <!-- q51 -->
+    <div class="question">
+      <p>51. When collecting biological evidence, you should:</p>
+      <div class="options">
+        <label><input type="radio" name="q51" value="a" data-correct="true"> Avoid contamination and package appropriately</label>
+        <label><input type="radio" name="q51" value="b"> Use bare hands</label>
+        <label><input type="radio" name="q51" value="c"> Place in sealed plastic immediately</label>
+        <label><input type="radio" name="q51" value="d"> Wash it first</label>
+      </div>
+    </div>
+
+    <!-- q52 -->
+    <div class="question">
+      <p>52. Porous items with biological stains should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q52" value="a" data-correct="true"> Air-dried and packaged in paper</label>
+        <label><input type="radio" name="q52" value="b"> Placed in airtight plastic</label>
+        <label><input type="radio" name="q52" value="c"> Washed first</label>
+        <label><input type="radio" name="q52" value="d"> Burned</label>
+      </div>
+    </div>
+
+    <!-- q53 -->
+    <div class="question">
+      <p>53. Non-porous items with blood should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q53" value="a" data-correct="true"> Dried and packaged appropriately (paper or plastic as procedure dictates)</label>
+        <label><input type="radio" name="q53" value="b"> Always placed in paper</label>
+        <label><input type="radio" name="q53" value="c"> Washed first</label>
+        <label><input type="radio" name="q53" value="d"> Thrown away</label>
+      </div>
+    </div>
+
+    <!-- q54 -->
+    <div class="question">
+      <p>54. Trace evidence (hair/fibers) is best collected by:</p>
+      <div class="options">
+        <label><input type="radio" name="q54" value="a" data-correct="true"> Tweezers or tape-lift</label>
+        <label><input type="radio" name="q54" value="b"> Washing the item</label>
+        <label><input type="radio" name="q54" value="c"> Vacuuming without control</label>
+        <label><input type="radio" name="q54" value="d"> Burning</label>
+      </div>
+    </div>
+
+    <!-- q55 -->
+    <div class="question">
+      <p>55. A primary goal when searching is to avoid:</p>
+      <div class="options">
+        <label><input type="radio" name="q55" value="a" data-correct="true"> Cross-contamination of evidence</label>
+        <label><input type="radio" name="q55" value="b"> Finding evidence</label>
+        <label><input type="radio" name="q55" value="c"> Using ALS</label>
+        <label><input type="radio" name="q55" value="d"> Documenting everything</label>
+      </div>
+    </div>
+
+    <!-- q56 -->
+    <div class="question">
+      <p>56. When searching vehicles, start where?</p>
+      <div class="options">
+        <label><input type="radio" name="q56" value="a" data-correct="true"> Systematically from exterior to interior</label>
+        <label><input type="radio" name="q56" value="b"> With the trunk only</label>
+        <label><input type="radio" name="q56" value="c"> With the engine</label>
+        <label><input type="radio" name="q56" value="d"> Randomly</label>
+      </div>
+    </div>
+
+    <!-- q57 -->
+    <div class="question">
+      <p>57. Evidence packaging should be labelled with:</p>
+      <div class="options">
+        <label><input type="radio" name="q57" value="a" data-correct="true"> Item description, case number, collector, date/time</label>
+        <label><input type="radio" name="q57" value="b"> Only case number</label>
+        <label><input type="radio" name="q57" value="c"> Only the collector’s name</label>
+        <label><input type="radio" name="q57" value="d"> Nothing</label>
+      </div>
+    </div>
+
+    <!-- q58 -->
+    <div class="question">
+      <p>58. When packaging fragile evidence you should:</p>
+      <div class="options">
+        <label><input type="radio" name="q58" value="a" data-correct="true"> Use padding and appropriate containers</label>
+        <label><input type="radio" name="q58" value="b"> Place in oversized boxes</label>
+        <label><input type="radio" name="q58" value="c"> Seal with tape only</label>
+        <label><input type="radio" name="q58" value="d"> Discard it</label>
+      </div>
+    </div>
+
+    <!-- q59 -->
+    <div class="question">
+      <p>59. Items that may contain DNA should be stored in:</p>
+      <div class="options">
+        <label><input type="radio" name="q59" value="a" data-correct="true"> Paper packaging to allow drying</label>
+        <label><input type="radio" name="q59" value="b"> Airtight plastic always</label>
+        <label><input type="radio" name="q59" value="c"> Metal boxes only</label>
+        <label><input type="radio" name="q59" value="d"> Open trays</label>
+      </div>
+    </div>
+
+    <!-- q60 -->
+    <div class="question">
+      <p>60. Electronic evidence at a scene is best preserved by:</p>
+      <div class="options">
+        <label><input type="radio" name="q60" value="a" data-correct="true"> Preventing remote wiping and documenting power state</label>
+        <label><input type="radio" name="q60" value="b"> Immediately turning devices on</label>
+        <label><input type="radio" name="q60" value="c"> Placing devices in direct sunlight</label>
+        <label><input type="radio" name="q60" value="d"> Rebooting them</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 5: Types of Evidence (20) -->
+  <section class="section" id="section-5">
+    <h2>Quiz 5 — Types of Evidence (20 questions)</h2>
+
+    <!-- q61 -->
+    <div class="question">
+      <p>61. Physical evidence is defined as:</p>
+      <div class="options">
+        <label><input type="radio" name="q61" value="a" data-correct="true"> Tangible objects that can link people/places/things</label>
+        <label><input type="radio" name="q61" value="b"> Only DNA</label>
+        <label><input type="radio" name="q61" value="c"> Only witness statements</label>
+        <label><input type="radio" name="q61" value="d"> Only photographs</label>
+      </div>
+    </div>
+
+    <!-- q62 -->
+    <div class="question">
+      <p>62. Trace evidence includes:</p>
+      <div class="options">
+        <label><input type="radio" name="q62" value="a" data-correct="true"> Hair, fibers, paint, glass</label>
+        <label><input type="radio" name="q62" value="b"> Large furniture</label>
+        <label><input type="radio" name="q62" value="c"> Digital logs</label>
+        <label><input type="radio" name="q62" value="d"> Medical records</label>
+      </div>
+    </div>
+
+    <!-- q63 -->
+    <div class="question">
+      <p>63. Serological evidence refers to:</p>
+      <div class="options">
+        <label><input type="radio" name="q63" value="a" data-correct="true"> Blood, saliva, semen and related tests</label>
+        <label><input type="radio" name="q63" value="b"> Shoe prints</label>
+        <label><input type="radio" name="q63" value="c"> Digital files</label>
+        <label><input type="radio" name="q63" value="d"> Gas analysis</label>
+      </div>
+    </div>
+
+    <!-- q64 -->
+    <div class="question">
+      <p>64. Firearms evidence commonly includes:</p>
+      <div class="options">
+        <label><input type="radio" name="q64" value="a" data-correct="true"> Guns, bullets, casings, trajectory marks</label>
+        <label><input type="radio" name="q64" value="b"> Only DNA</label>
+        <label><input type="radio" name="q64" value="c"> Notebook pages</label>
+        <label><input type="radio" name="q64" value="d"> Eyewitness ID</label>
+      </div>
+    </div>
+
+    <!-- q65 -->
+    <div class="question">
+      <p>65. Footwear and tire impressions can provide:</p>
+      <div class="options">
+        <label><input type="radio" name="q65" value="a" data-correct="true"> Class and sometimes individual characteristics linking to source</label>
+        <label><input type="radio" name="q65" value="b"> Only color information</label>
+        <label><input type="radio" name="q65" value="c"> Only DNA</label>
+        <label><input type="radio" name="q65" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q66 -->
+    <div class="question">
+      <p>66. Digital evidence includes:</p>
+      <div class="options">
+        <label><input type="radio" name="q66" value="a" data-correct="true"> Computers, phones, storage media, logs</label>
+        <label><input type="radio" name="q66" value="b"> Only prints</label>
+        <label><input type="radio" name="q66" value="c"> Only fibers</label>
+        <label><input type="radio" name="q66" value="d"> Only photographs</label>
+      </div>
+    </div>
+
+    <!-- q67 -->
+    <div class="question">
+      <p>67. Injury documentation must include:</p>
+      <div class="options">
+        <label><input type="radio" name="q67" value="a" data-correct="true"> Photos, measurements, and narrative description</label>
+        <label><input type="radio" name="q67" value="b"> Only sketches</label>
+        <label><input type="radio" name="q67" value="c"> Only witness statements</label>
+        <label><input type="radio" name="q67" value="d"> Only lab tests</label>
+      </div>
+    </div>
+
+    <!-- q68 -->
+    <div class="question">
+      <p>68. Individualization of evidence seeks to:</p>
+      <div class="options">
+        <label><input type="radio" name="q68" value="a" data-correct="true"> Link evidence uniquely to a single source</label>
+        <label><input type="radio" name="q68" value="b"> Show class characteristics only</label>
+        <label><input type="radio" name="q68" value="c"> Always exclude suspects</label>
+        <label><input type="radio" name="q68" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q69 -->
+    <div class="question">
+      <p>69. Class characteristics are:</p>
+      <div class="options">
+        <label><input type="radio" name="q69" value="a" data-correct="true"> Shared by a group (e.g., shoe size/model)</label>
+        <label><input type="radio" name="q69" value="b"> Unique patterns only</label>
+        <label><input type="radio" name="q69" value="c"> DNA profiles</label>
+        <label><input type="radio" name="q69" value="d"> Witness testimony</label>
+      </div>
+    </div>
+
+    <!-- q70 -->
+    <div class="question">
+      <p>70. Biological evidence is often strongest when:</p>
+      <div class="options">
+        <label><input type="radio" name="q70" value="a" data-correct="true"> Properly preserved and uncontaminated</label>
+        <label><input type="radio" name="q70" value="b"> Left exposed to heat</label>
+        <label><input type="radio" name="q70" value="c"> Mixed with other fluids</label>
+        <label><input type="radio" name="q70" value="d"> Washed before collection</label>
+      </div>
+    </div>
+
+    <!-- q71 -->
+    <div class="question">
+      <p>71. Firearms toolmark analysis attempts to compare:</p>
+      <div class="options">
+        <label><input type="radio" name="q71" value="a" data-correct="true"> Impressions left on bullets/casings to a particular gun</label>
+        <label><input type="radio" name="q71" value="b"> DNA to finger prints</label>
+        <label><input type="radio" name="q71" value="c"> Footwear to tire impressions</label>
+        <label><input type="radio" name="q71" value="d"> Blood to serology only</label>
+      </div>
+    </div>
+
+    <!-- q72 -->
+    <div class="question">
+      <p>72. Impression evidence may be lifted using:</p>
+      <div class="options">
+        <label><input type="radio" name="q72" value="a" data-correct="true"> Casting materials or electrostatic lifters</label>
+        <label><input type="radio" name="q72" value="b"> Washing</label>
+        <label><input type="radio" name="q72" value="c"> Burning</label>
+        <label><input type="radio" name="q72" value="d"> Shredding</label>
+      </div>
+    </div>
+
+    <!-- q73 -->
+    <div class="question">
+      <p>73. Serological screening tests are typically:</p>
+      <div class="options">
+        <label><input type="radio" name="q73" value="a" data-correct="true"> Presumptive and require confirmation</label>
+        <label><input type="radio" name="q73" value="b"> Confirmatory only</label>
+        <label><input type="radio" name="q73" value="c"> Unnecessary</label>
+        <label><input type="radio" name="q73" value="d"> Replaced by fingerprints</label>
+      </div>
+    </div>
+
+    <!-- q74 -->
+    <div class="question">
+      <p>74. Digital evidence integrity is ensured by:</p>
+      <div class="options">
+        <label><input type="radio" name="q74" value="a" data-correct="true"> Using forensic imaging and hashing</label>
+        <label><input type="radio" name="q74" value="b"> Opening files on scene</label>
+        <label><input type="radio" name="q74" value="c"> Printing all files</label>
+        <label><input type="radio" name="q74" value="d"> Deleting temporary files</label>
+      </div>
+    </div>
+
+    <!-- q75 -->
+    <div class="question">
+      <p>75. Chain of custody is crucial for:</p>
+      <div class="options">
+        <label><input type="radio" name="q75" value="a" data-correct="true"> Proving evidence has not been altered</label>
+        <label><input type="radio" name="q75" value="b"> Destroying evidence</label>
+        <label><input type="radio" name="q75" value="c"> Hiding evidence</label>
+        <label><input type="radio" name="q75" value="d"> Speeding up processing</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 6: Special Considerations (15) -->
+  <section class="section" id="section-6">
+    <h2>Quiz 6 — Special Considerations (15 questions)</h2>
+
+    <!-- q76 -->
+    <div class="question">
+      <p>76. Shooting scene documentation must include:</p>
+      <div class="options">
+        <label><input type="radio" name="q76" value="a" data-correct="true"> Trajectory, bullet paths, and positions of spent casings</label>
+        <label><input type="radio" name="q76" value="b"> Only photos</label>
+        <label><input type="radio" name="q76" value="c"> Only witness accounts</label>
+        <label><input type="radio" name="q76" value="d"> Only sketches</label>
+      </div>
+    </div>
+
+    <!-- q77 -->
+    <div class="question">
+      <p>77. Bloodstain documentation often uses:</p>
+      <div class="options">
+        <label><input type="radio" name="q77" value="a" data-correct="true"> Photography, measurement and pattern analysis</label>
+        <label><input type="radio" name="q77" value="b"> Only chemical tests</label>
+        <label><input type="radio" name="q77" value="c"> Only sketches</label>
+        <label><input type="radio" name="q77" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q78 -->
+    <div class="question">
+      <p>78. For clandestine graves, first priority is to:</p>
+      <div class="options">
+        <label><input type="radio" name="q78" value="a" data-correct="true"> Secure and map the area carefully</label>
+        <label><input type="radio" name="q78" value="b"> Continue excavating immediately without plan</label>
+        <label><input type="radio" name="q78" value="c"> Remove remains rapidly</label>
+        <label><input type="radio" name="q78" value="d"> Burn the area</label>
+      </div>
+    </div>
+
+    <!-- q79 -->
+    <div class="question">
+      <p>79. When handling scattered human remains you should:</p>
+      <div class="options">
+        <label><input type="radio" name="q79" value="a" data-correct="true"> Photograph and map location before collection</label>
+        <label><input type="radio" name="q79" value="b"> Move remains immediately</label>
+        <label><input type="radio" name="q79" value="c"> Burn remains</label>
+        <label><input type="radio" name="q79" value="d"> Ignore small fragments</label>
+      </div>
+    </div>
+
+    <!-- q80 -->
+    <div class="question">
+      <p>80. Fire scenes require which special step?</p>
+      <div class="options">
+        <label><input type="radio" name="q80" value="a" data-correct="true"> Determine origin and cause and document heat effects</label>
+        <label><input type="radio" name="q80" value="b"> Use water liberally to collect evidence</label>
+        <label><input type="radio" name="q80" value="c"> Immediately collect ashes</label>
+        <label><input type="radio" name="q80" value="d"> Burn everything</label>
+      </div>
+    </div>
+
+    <!-- q81 -->
+    <div class="question">
+      <p>81. Questioned document examination may analyze:</p>
+      <div class="options">
+        <label><input type="radio" name="q81" value="a" data-correct="true"> Handwriting, ink, paper, and printing methods</label>
+        <label><input type="radio" name="q81" value="b"> Only digital files</label>
+        <label><input type="radio" name="q81" value="c"> Only blood</label>
+        <label><input type="radio" name="q81" value="d"> Only shoeprints</label>
+      </div>
+    </div>
+
+    <!-- q82 -->
+    <div class="question">
+      <p>82. At fire scenes, accelerant detection commonly uses:</p>
+      <div class="options">
+        <label><input type="radio" name="q82" value="a" data-correct="true"> Portable hydrocarbon detectors and laboratory GC-MS</label>
+        <label><input type="radio" name="q82" value="b"> Luminol only</label>
+        <label><input type="radio" name="q82" value="c"> Ninhydrin only</label>
+        <label><input type="radio" name="q82" value="d"> Fingerprint powder</label>
+      </div>
+    </div>
+
+    <!-- q83 -->
+    <div class="question">
+      <p>83. When documenting a shooting scene, investigators should mark:</p>
+      <div class="options">
+        <label><input type="radio" name="q83" value="a" data-correct="true"> Spent casings, bullet impacts, and shooter position</label>
+        <label><input type="radio" name="q83" value="b"> Only blood</label>
+        <label><input type="radio" name="q83" value="c"> Only witnesses</label>
+        <label><input type="radio" name="q83" value="d"> Nothing</label>
+      </div>
+    </div>
+
+    <!-- q84 -->
+    <div class="question">
+      <p>84. Bloodstain pattern analysis can indicate:</p>
+      <div class="options">
+        <label><input type="radio" name="q84" value="a" data-correct="true"> Direction and mechanism of bloodshed</label>
+        <label><input type="radio" name="q84" value="b"> Only DNA</label>
+        <label><input type="radio" name="q84" value="c"> Only fingerprints</label>
+        <label><input type="radio" name="q84" value="d"> The suspect’s name</label>
+      </div>
+    </div>
+
+    <!-- q85 -->
+    <div class="question">
+      <p>85. For clandestine graves forensic anthropologists help to:</p>
+      <div class="options">
+        <label><input type="radio" name="q85" value="a" data-correct="true"> Determine identity, trauma, and postmortem interval</label>
+        <label><input type="radio" name="q85" value="b"> Only dig quickly</label>
+        <label><input type="radio" name="q85" value="c"> Burn the remains</label>
+        <label><input type="radio" name="q85" value="d"> Ignore context</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 7: Putting It All Together (15) -->
+  <section class="section" id="section-7">
+    <h2>Quiz 7 — Putting It All Together (15 questions)</h2>
+
+    <!-- q86 -->
+    <div class="question">
+      <p>86. A working plan for processing a scene should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q86" value="a" data-correct="true"> Based on priorities, scene type, and available resources</label>
+        <label><input type="radio" name="q86" value="b"> Random</label>
+        <label><input type="radio" name="q86" value="c"> Only decided after leaving</label>
+        <label><input type="radio" name="q86" value="d"> Set by witnesses</label>
+      </div>
+    </div>
+
+    <!-- q87 -->
+    <div class="question">
+      <p>87. A processing methodology includes:</p>
+      <div class="options">
+        <label><input type="radio" name="q87" value="a" data-correct="true"> Scene security, documentation, search, collection, and preservation</label>
+        <label><input type="radio" name="q87" value="b"> Only photographing</label>
+        <label><input type="radio" name="q87" value="c"> Only sketching</label>
+        <label><input type="radio" name="q87" value="d"> Ignoring documentation</label>
+      </div>
+    </div>
+
+    <!-- q88 -->
+    <div class="question">
+      <p>88. A clear report should include:</p>
+      <div class="options">
+        <label><input type="radio" name="q88" value="a" data-correct="true"> Objective findings, methods, and chain of custody</label>
+        <label><input type="radio" name="q88" value="b"> Only opinions</label>
+        <label><input type="radio" name="q88" value="c"> Only sketches</label>
+        <label><input type="radio" name="q88" value="d"> Nothing</label>
+      </div>
+    </div>
+
+    <!-- q89 -->
+    <div class="question">
+      <p>89. Which improves the defensibility of forensic work?</p>
+      <div class="options">
+        <label><input type="radio" name="q89" value="a" data-correct="true"> Detailed documentation and adherence to protocols</label>
+        <label><input type="radio" name="q89" value="b"> Hiding procedures</label>
+        <label><input type="radio" name="q89" value="c"> Random sampling</label>
+        <label><input type="radio" name="q89" value="d"> Destroying evidence</label>
+      </div>
+    </div>
+
+    <!-- q90 -->
+    <div class="question">
+      <p>90. During report writing you should avoid:</p>
+      <div class="options">
+        <label><input type="radio" name="q90" value="a" data-correct="true"> Opinion presented as fact</label>
+        <label><input type="radio" name="q90" value="b"> Clarity</label>
+        <label><input type="radio" name="q90" value="c"> Objective language</label>
+        <label><input type="radio" name="q90" value="d"> Accurate timelines</label>
+      </div>
+    </div>
+
+    <!-- q91 -->
+    <div class="question">
+      <p>91. A good final report should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q91" value="a" data-correct="true"> Clear, concise and supported by documentation</label>
+        <label><input type="radio" name="q91" value="b"> Overly technical</label>
+        <label><input type="radio" name="q91" value="c"> Vague</label>
+        <label><input type="radio" name="q91" value="d"> Missing methods</label>
+      </div>
+    </div>
+
+    <!-- q92 -->
+    <div class="question">
+      <p>92. Before processing you should always:</p>
+      <div class="options">
+        <label><input type="radio" name="q92" value="a" data-correct="true"> Secure the scene and ensure safety</label>
+        <label><input type="radio" name="q92" value="b"> Start collection immediately</label>
+        <label><input type="radio" name="q92" value="c"> Ignore witnesses</label>
+        <label><input type="radio" name="q92" value="d"> Remove evidence</label>
+      </div>
+    </div>
+
+    <!-- q93 -->
+    <div class="question">
+      <p>93. The working plan should be:</p>
+      <div class="options">
+        <label><input type="radio" name="q93" value="a" data-correct="true"> Flexible to account for new information</label>
+        <label><input type="radio" name="q93" value="b"> Strict and never changed</label>
+        <label><input type="radio" name="q93" value="c"> Secret</label>
+        <label><input type="radio" name="q93" value="d"> Only verbal</label>
+      </div>
+    </div>
+
+    <!-- q94 -->
+    <div class="question">
+      <p>94. Team debriefs after processing help to:</p>
+      <div class="options">
+        <label><input type="radio" name="q94" value="a" data-correct="true"> Capture lessons learned and unresolved issues</label>
+        <label><input type="radio" name="q94" value="b"> Remove evidence</label>
+        <label><input type="radio" name="q94" value="c"> Hide mistakes</label>
+        <label><input type="radio" name="q94" value="d"> Ignore findings</label>
+      </div>
+    </div>
+
+    <!-- q95 -->
+    <div class="question">
+      <p>95. When writing recommendations include:</p>
+      <div class="options">
+        <label><input type="radio" name="q95" value="a" data-correct="true"> Practical next steps and follow-up actions</label>
+        <label><input type="radio" name="q95" value="b"> Blame only</label>
+        <label><input type="radio" name="q95" value="c"> Technical jargon only</label>
+        <label><input type="radio" name="q95" value="d"> No evidence</label>
+      </div>
+    </div>
+
+    <!-- q96 -->
+    <div class="question">
+      <p>96. A processing timeline helps to:</p>
+      <div class="options">
+        <label><input type="radio" name="q96" value="a" data-correct="true"> Establish when key actions occurred</label>
+        <label><input type="radio" name="q96" value="b"> Confuse the record</label>
+        <label><input type="radio" name="q96" value="c"> Replace evidence</label>
+        <label><input type="radio" name="q96" value="d"> Hide mistakes</label>
+      </div>
+    </div>
+
+    <!-- q97 -->
+    <div class="question">
+      <p>97. Which improves court presentation of findings?</p>
+      <div class="options">
+        <label><input type="radio" name="q97" value="a" data-correct="true"> Clear exhibits and supporting documentation</label>
+        <label><input type="radio" name="q97" value="b"> Rambling testimony</label>
+        <label><input type="radio" name="q97" value="c"> No documentation</label>
+        <label><input type="radio" name="q97" value="d"> Unverified claims</label>
+      </div>
+    </div>
+
+    <!-- q98 -->
+    <div class="question">
+      <p>98. The final sign-off on evidence requires:</p>
+      <div class="options">
+        <label><input type="radio" name="q98" value="a" data-correct="true"> Proper documentation and custody recording</label>
+        <label><input type="radio" name="q98" value="b"> Supervisor’s guess</label>
+        <label><input type="radio" name="q98" value="c"> Destroying chain records</label>
+        <label><input type="radio" name="q98" value="d"> No record</label>
+      </div>
+    </div>
+
+    <!-- q99 -->
+    <div class="question">
+      <p>99. Quality assurance in processing includes:</p>
+      <div class="options">
+        <label><input type="radio" name="q99" value="a" data-correct="true"> Peer review and protocol adherence</label>
+        <label><input type="radio" name="q99" value="b"> No oversight</label>
+        <label><input type="radio" name="q99" value="c"> Ignoring standards</label>
+        <label><input type="radio" name="q99" value="d"> Only speed</label>
+      </div>
+    </div>
+
+    <!-- q100 -->
+    <div class="question">
+      <p>100. Ethics in forensic work requires:</p>
+      <div class="options">
+        <label><input type="radio" name="q100" value="a" data-correct="true"> Objectivity and honesty in methods and reporting</label>
+        <label><input type="radio" name="q100" value="b"> Bias in favor of prosecution</label>
+        <label><input type="radio" name="q100" value="c"> Hiding unfavorable results</label>
+        <label><input type="radio" name="q100" value="d"> Altering evidence</label>
+      </div>
+    </div>
+
+    <!-- q101 -->
+    <div class="question">
+      <p>101. A clear chain of command prevents:</p>
+      <div class="options">
+        <label><input type="radio" name="q101" value="a" data-correct="true"> Confusion and duplicated work</label>
+        <label><input type="radio" name="q101" value="b"> Documentation</label>
+        <label><input type="radio" name="q101" value="c"> Evidence collection</label>
+        <label><input type="radio" name="q101" value="d"> Photography</label>
+      </div>
+    </div>
+
+    <!-- q102 -->
+    <div class="question">
+      <p>102. Cross-disciplinary cooperation is helpful because:</p>
+      <div class="options">
+        <label><input type="radio" name="q102" value="a" data-correct="true"> Different experts bring complementary skills</label>
+        <label><input type="radio" name="q102" value="b"> It slows the process</label>
+        <label><input type="radio" name="q102" value="c"> It complicates reports</label>
+        <label><input type="radio" name="q102" value="d"> It is unnecessary</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 8: Extra fillers to reach 120 (q103 - q120). We'll use additional integration/general questions (18 remaining to reach 120?) -->
+  <!-- Note: We have created up to q102 above. Need q103..q120 (18 questions). -->
+  <section class="section" id="section-8">
+    <h2>Additional Integration Questions (to reach 120)</h2>
+
+    <!-- q103 -->
+    <div class="question">
+      <p>103. Which item requires special chain of custody when transferred to lab?</p>
+      <div class="options">
+        <label><input type="radio" name="q103" value="a"> A used tissue</label>
+        <label><input type="radio" name="q103" value="b" data-correct="true"> Any biological sample</label>
+        <label><input type="radio" name="q103" value="c"> A printed photograph</label>
+        <label><input type="radio" name="q103" value="d"> An empty bag</label>
+      </div>
+    </div>
+
+    <!-- q104 -->
+    <div class="question">
+      <p>104. Which is essential to show on evidence labels?</p>
+      <div class="options">
+        <label><input type="radio" name="q104" value="a" data-correct="true"> Case number and collector</label>
+        <label><input type="radio" name="q104" value="b"> Only packaging type</label>
+        <label><input type="radio" name="q104" value="c"> Only the lab name</label>
+        <label><input type="radio" name="q104" value="d"> Photographer's shoe size</label>
+      </div>
+    </div>
+
+    <!-- q105 -->
+    <div class="question">
+      <p>105. Why document scene temperature when processing fire scenes?</p>
+      <div class="options">
+        <label><input type="radio" name="q105" value="a" data-correct="true"> Temperature affects evidence preservation and interpretation</label>
+        <label><input type="radio" name="q105" value="b"> To record investigator comfort</label>
+        <label><input type="radio" name="q105" value="c"> To determine weather only</label>
+        <label><input type="radio" name="q105" value="d"> No reason</label>
+      </div>
+    </div>
+
+    <!-- q106 -->
+    <div class="question">
+      <p>106. Which term describes the stepwise approach to scene processing?</p>
+      <div class="options">
+        <label><input type="radio" name="q106" value="a" data-correct="true"> Methodology</label>
+        <label><input type="radio" name="q106" value="b"> Chaos</label>
+        <label><input type="radio" name="q106" value="c"> Guesswork</label>
+        <label><input type="radio" name="q106" value="d"> Hearsay</label>
+      </div>
+    </div>
+
+    <!-- q107 -->
+    <div class="question">
+      <p>107. During mass-casualty scenes, priorities include:</p>
+      <div class="options">
+        <label><input type="radio" name="q107" value="a" data-correct="true"> Safety, triage, and evidence preservation</label>
+        <label><input type="radio" name="q107" value="b"> Only evidence collection</label>
+        <label><input type="radio" name="q107" value="c"> Only photography</label>
+        <label><input type="radio" name="q107" value="d"> Nothing</label>
+      </div>
+    </div>
+
+    <!-- q108 -->
+    <div class="question">
+      <p>108. Which is true about eyewitness accounts?</p>
+      <div class="options">
+        <label><input type="radio" name="q108" value="a" data-correct="true"> They can be inaccurate and should be corroborated</label>
+        <label><input type="radio" name="q108" value="b"> Always 100% reliable</label>
+        <label><input type="radio" name="q108" value="c"> Never useful</label>
+        <label><input type="radio" name="q108" value="d"> Should be ignored</label>
+      </div>
+    </div>
+
+    <!-- q109 -->
+    <div class="question">
+      <p>109. When should investigators preserve the scene tape/marker evidence?</p>
+      <div class="options">
+        <label><input type="radio" name="q109" value="a" data-correct="true"> Until all evidence is documented and collected</label>
+        <label><input type="radio" name="q109" value="b"> Immediately remove it</label>
+        <label><input type="radio" name="q109" value="c"> Never use tape</label>
+        <label><input type="radio" name="q109" value="d"> Use tape only for photos</label>
+      </div>
+    </div>
+
+    <!-- q110 -->
+    <div class="question">
+      <p>110. The purpose of control samples is to:</p>
+      <div class="options">
+        <label><input type="radio" name="q110" value="a" data-correct="true"> Provide a baseline to compare evidence</label>
+        <label><input type="radio" name="q110" value="b"> Replace evidence</label>
+        <label><input type="radio" name="q110" value="c"> Discard evidence</label>
+        <label><input type="radio" name="q110" value="d"> None of the above</label>
+      </div>
+    </div>
+
+    <!-- q111 -->
+    <div class="question">
+      <p>111. Which is a best practice when collecting questioned documents?</p>
+      <div class="options">
+        <label><input type="radio" name="q111" value="a" data-correct="true"> Package individually to avoid cross-contamination</label>
+        <label><input type="radio" name="q111" value="b"> Stack all together</label>
+        <label><input type="radio" name="q111" value="c"> Shred them</label>
+        <label><input type="radio" name="q111" value="d"> Rub them together</label>
+      </div>
+    </div>
+
+    <!-- q112 -->
+    <div class="question">
+      <p>112. For footwear impressions in soft soil, investigators should:</p>
+      <div class="options">
+        <label><input type="radio" name="q112" value="a" data-correct="true"> Cast impressions with dental stone</label>
+        <label><input type="radio" name="q112" value="b"> Water them</label>
+        <label><input type="radio" name="q112" value="c"> Drive over them</label>
+        <label><input type="radio" name="q112" value="d"> Cover them</label>
+      </div>
+    </div>
+
+    <!-- q113 -->
+    <div class="question">
+      <p>113. When collecting evidence from a child’s environment, investigators should:</p>
+      <div class="options">
+        <label><input type="radio" name="q113" value="a" data-correct="true"> Use child-sensitive approaches and preserve items carefully</label>
+        <label><input type="radio" name="q113" value="b"> Ignore consent</label>
+        <label><input type="radio" name="q113" value="c"> Remove all toys</label>
+        <label><input type="radio" name="q113" value="d"> Search randomly</label>
+      </div>
+    </div>
+
+    <!-- q114 -->
+    <div class="question">
+      <p>114. For DNA evidence, contamination may be minimized by:</p>
+      <div class="options">
+        <label><input type="radio" name="q114" value="a" data-correct="true"> Wearing gloves and changing them between items</label>
+        <label><input type="radio" name="q114" value="b"> Using bare hands</label>
+        <label><input type="radio" name="q114" value="c"> Touching items together</label>
+        <label><input type="radio" name="q114" value="d"> Washing items</label>
+      </div>
+    </div>
+
+    <!-- q115 -->
+    <div class="question">
+      <p>115. If an item of evidence is fragile, best to:</p>
+      <div class="options">
+        <label><input type="radio" name="q115" value="a" data-correct="true"> Photograph and stabilize before collection</label>
+        <label><input type="radio" name="q115" value="b"> Ignore it</label>
+        <label><input type="radio" name="q115" value="c"> Crush it</label>
+        <label><input type="radio" name="q115" value="d"> Throw it away</label>
+      </div>
+    </div>
+
+    <!-- q116 -->
+    <div class="question">
+      <p>116. Which documentation helps when chain of custody is questioned later?</p>
+      <div class="options">
+        <label><input type="radio" name="q116" value="a" data-correct="true"> Signed and dated logs showing transfers</label>
+        <label><input type="radio" name="q116" value="b"> Only verbal claims</label>
+        <label><input type="radio" name="q116" value="c"> Handwritten notes without dates</label>
+        <label><input type="radio" name="q116" value="d"> Nothing</label>
+      </div>
+    </div>
+
+    <!-- q117 -->
+    <div class="question">
+      <p>117. A standard operating procedure (SOP) helps to:</p>
+      <div class="options">
+        <label><input type="radio" name="q117" value="a" data-correct="true"> Ensure consistent and defensible practices</label>
+        <label><input type="radio" name="q117" value="b"> Encourage improvisation only</label>
+        <label><input type="radio" name="q117" value="c"> Remove oversight</label>
+        <label><input type="radio" name="q117" value="d"> Be ignored</label>
+      </div>
+    </div>
+
+    <!-- q118 -->
+    <div class="question">
+      <p>118. In multi-jurisdiction cases, investigators should:</p>
+      <div class="options">
+        <label><input type="radio" name="q118" value="a" data-correct="true"> Coordinate with other agencies and clarify roles</label>
+        <label><input type="radio" name="q118" value="b"> Work independently only</label>
+        <label><input type="radio" name="q118" value="c"> Ignore other agencies</label>
+        <label><input type="radio" name="q118" value="d"> Hide evidence</label>
+      </div>
+    </div>
+
+    <!-- q119 -->
+    <div class="question">
+      <p>119. Chain of custody breaks can cause:</p>
+      <div class="options">
+        <label><input type="radio" name="q119" value="a" data-correct="true"> Questions about evidence admissibility</label>
+        <label><input type="radio" name="q119" value="b"> Faster trials</label>
+        <label><input type="radio" name="q119" value="c"> Better evidence</label>
+        <label><input type="radio" name="q119" value="d"> No consequences</label>
+      </div>
+    </div>
+
+    <!-- q120 -->
+    <div class="question">
+      <p>120. Which best summarizes good forensic practice?</p>
+      <div class="options">
+        <label><input type="radio" name="q120" value="a" data-correct="true"> Systematic, documented, and unbiased processes</label>
+        <label><input type="radio" name="q120" value="b"> Quick and undocumented actions</label>
+        <label><input type="radio" name="q120" value="c"> Biased interpretation only</label>
+        <label><input type="radio" name="q120" value="d"> Destroying unfavorable evidence</label>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Buttons -->
+  <div style="text-align:center; margin:18px 0;">
+    <button type="button" onclick="submitAll()">Submit All</button>
+    <button type="button" onclick="resetQuiz()">Reset Quiz</button>
+  </div>
+
+</form>
+
+<div id="result"></div>
+
+<footer>
+  <small>Built for training — © Your Team</small>
+</footer>
+
+<script>
+  function submitAll() {
+    const total = 120;
+    let score = 0;
+
+    // Remove any previous classes
+    const allLabels = document.querySelectorAll('.options label');
+    allLabels.forEach(l => {
+      l.classList.remove('correct', 'wrong');
+    });
+
+    for (let i = 1; i <= total; i++) {
+      const qName = 'q' + i;
+      const options = document.getElementsByName(qName);
+
+      // highlight correct answers (even if not selected)
+      let correctLabel = null;
+      for (let opt of options) {
+        if (opt.dataset && opt.dataset.correct === "true") {
+          correctLabel = opt.parentElement;
+          correctLabel.classList.add('correct');
+        }
+      }
+
+      // find selected
+      const selected = document.querySelector(`input[name="${qName}"]:checked`);
+      if (selected) {
+        if (selected.dataset && selected.dataset.correct === "true") {
+          score++;
+        } else {
+          // mark selected wrong
+          selected.parentElement.classList.add('wrong');
+        }
+      } else {
+        // no selection — leave correct highlighted, but no score
+      }
+    }
+
+    const percent = (score / total) * 100;
+    const out = `<div id="resultTop"><strong>Your score: ${score} / ${total} (${percent.toFixed(2)}%)</strong></div>`;
+    document.getElementById('result').innerHTML = out;
+    // scroll to top result
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetQuiz() {
+    // clear radio selections
+    const checked = document.querySelectorAll('input[type="radio"]:checked');
+    checked.forEach(c => c.checked = false);
+    // remove highlights
+    const allLabels = document.querySelectorAll('.options label');
+    allLabels.forEach(l => {
+      l.classList.remove('correct', 'wrong');
+    });
+    document.getElementById('result').innerHTML = '';
+  }
+</script>
+
+  </body>
+</html>
